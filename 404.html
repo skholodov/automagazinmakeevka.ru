@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Мороз Денис</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #22c55e;
+            --primary-glow: rgba(34, 197, 94, 0.6);
+            --secondary-color: #06b6d4;
+            --secondary-glow: rgba(6, 182, 212, 0.4);
+            --bg-primary: #0a0a0a;
+            --text-primary: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Neon Grid Background */
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        /* Floating Auto Parts */
+        .part {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px var(--primary-glow));
+        }
+
+        .part:nth-child(1) {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+            color: var(--primary-color);
+        }
+
+        .part:nth-child(2) {
+            top: 25%;
+            right: 15%;
+            animation-delay: -2s;
+            color: var(--secondary-color);
+        }
+
+        .part:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -4s;
+            color: var(--primary-color);
+        }
+
+        .part:nth-child(4) {
+            bottom: 30%;
+            right: 10%;
+            animation-delay: -6s;
+            color: var(--secondary-color);
+        }
+
+        .part:nth-child(5) {
+            top: 40%;
+            left: 5%;
+            animation-delay: -3s;
+            color: var(--primary-color);
+        }
+
+        .part:nth-child(6) {
+            top: 60%;
+            right: 5%;
+            animation-delay: -5s;
+            color: var(--secondary-color);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        /* Neon Circles */
+        .neon-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid;
+            opacity: 0.2;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            left: -100px;
+            border-color: var(--primary-color);
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            right: -150px;
+            border-color: var(--secondary-color);
+            animation-delay: -2s;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.4;
+            }
+        }
+
+        /* Main Content */
+        .container {
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-code {
+            font-size: 200px;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 60px var(--primary-glow);
+            filter: drop-shadow(0 0 30px var(--primary-glow));
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 30px var(--primary-glow));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 50px var(--primary-glow));
+            }
+        }
+
+        .neon-text {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-top: 20px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            animation: flicker 4s infinite;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            100% {
+                opacity: 0.8;
+            }
+
+            92% {
+                opacity: 0.8;
+            }
+
+            93% {
+                opacity: 0.4;
+            }
+
+            94% {
+                opacity: 0.8;
+            }
+
+            96% {
+                opacity: 0.4;
+            }
+
+            97% {
+                opacity: 0.8;
+            }
+        }
+
+        .link-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: var(--text-primary);
+            opacity: 0.5;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .link-hint:hover {
+            opacity: 1;
+        }
+
+        .link-hint span {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="grid-bg"></div>
+    <div class="neon-circle circle-1"></div>
+    <div class="neon-circle circle-2"></div>
+
+    <!-- Floating Auto Parts -->
+    <i class="fas fa-cog part"></i>
+    <i class="fas fa-oil-can part"></i>
+    <i class="fas fa-car-battery part"></i>
+    <i class="fas fa-tools part"></i>
+    <i class="fas fa-screwdriver part"></i>
+    <i class="fas fa-gears part"></i>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="neon-text">Page Not Found</div>
+    </div>
+
+    <a href="/" class="link-hint">Вернуться на <span>главную</span></a>
+</body>
+
+</html>

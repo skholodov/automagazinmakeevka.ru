@@ -1,0 +1,38 @@
+# robots.txt для Мороз Денис
+# https://morozdenis.ru/
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin.html
+
+# Sitemap location
+Sitemap: https://morozdenis.ru/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Host (для Yandex)
+Host: morozdenis.ru
+
+# Clean-param (убирает дубли страниц с параметрами)
+Clean-param: utm_source&utm_medium&utm_campaign
+
+# Yandex-specific
+User-agent: Yandex
+Allow: /
+Disallow: /admin.html
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /admin.html
+
+# Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+# YandexImages
+User-agent: YandexImages
+Allow: /assets/img/
